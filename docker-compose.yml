@@ -1,0 +1,13 @@
+services:
+  mediguide:
+    build: .
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env            # contains OPENAI_API_KEY (never baked into the image)
+    volumes:
+      - cache_data:/app/.cache   # keeps the SQLiteCache between restarts
+    restart: unless-stopped
+
+volumes:
+  cache_data:
