@@ -1,0 +1,10 @@
+# Theme colours. No "base" is set, so the app follows the user's light/dark choice
+# (switch it from the top-right menu -> Settings -> Theme).
+[theme]
+primaryColor = "#0f766e"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
